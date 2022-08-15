@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Products from "../components/Products";
 import TopCampaign from "../components/TopCampaign";
 
 function Home() {
@@ -7,6 +8,7 @@ function Home() {
     <div>
       <TopCampaign />
       <Navbar />
+      <Products />
     </div>
   );
 }
