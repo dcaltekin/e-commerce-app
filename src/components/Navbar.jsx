@@ -28,7 +28,7 @@ function Navbar() {
           className={
             icon
               ? "hidden md:flex gap-x-4"
-              : "flex flex-col absolute bg-gray-300 mt-48 gap-y-8  p-8 justify-center items-center w-full transition-all"
+              : "flex flex-col absolute bg-gray-300 mt-48 gap-y-8  p-8 justify-center items-center w-full transition-all z-100"
           }
         >
           <div className="relative">
