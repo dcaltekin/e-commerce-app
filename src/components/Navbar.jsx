@@ -14,6 +14,7 @@ function Navbar() {
   const handleRegisterIcon = () => {
     setRegisterIcon(!registerIcon);
   };
+
   return (
     <div>
       <TopCampaign />
