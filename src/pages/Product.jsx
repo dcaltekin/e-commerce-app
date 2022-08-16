@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Navbar from "../components/Navbar";
 
 function Product() {
   const { id } = useParams();
@@ -19,7 +20,11 @@ function Product() {
     };
     getProductData();
   }, []);
-  return <div>Product</div>;
+  return (
+    <div>
+      <Navbar /> Product
+    </div>
+  );
 }
 
 export default Product;

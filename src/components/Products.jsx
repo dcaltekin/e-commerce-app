@@ -7,15 +7,13 @@ function Products() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  console.log(data);
-
   const allCategories = [
     "All",
     ...new Set(data.map((item, index) => item.category)),
   ];
-  console.log(allCategories);
+
   const [menuItems, setMenuItems] = useState([]);
-  console.log(menuItems);
+
   const filterItems = (category) => {
     const newCategory = data.filter((item) => item.category === category);
     setMenuItems(newCategory);
@@ -49,7 +47,7 @@ function Products() {
         "Yükleniyor"
       ) : (
         <div>
-          <div className="text-center mt-12">
+          <div className="text-center container mx-auto mt-12">
             {allCategories.map((category, index) => {
               return (
                 <button

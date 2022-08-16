@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
 body {
   margin: 0;
   padding: 0;
@@ -11,6 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  contain: paint;
 }
 
 #sortbox:checked ~ #sortboxmenu {

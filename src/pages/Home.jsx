@@ -2,12 +2,13 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Products from "../components/Products";
 import TopCampaign from "../components/TopCampaign";
+import TopSlider from "../components/TopSlider";
 
 function Home() {
   return (
     <div>
-      <TopCampaign />
       <Navbar />
+      <TopSlider />
       <Products />
     </div>
   );
