@@ -15,7 +15,7 @@ function TopSlider() {
     pauseOnHover: true,
   };
   return (
-    <div className=" p-0 md:p-0 ">
+    <div className=" p-0 md:p-0 -z-100">
       <Slider {...settings}>
         <div className="">
           <img

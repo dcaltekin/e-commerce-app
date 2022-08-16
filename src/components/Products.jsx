@@ -46,7 +46,7 @@ function Products() {
     <div>
       {loading ? (
         <div className="flex justify-center items-center mt-48">
-          <div class="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
+          <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
         </div>
       ) : (
         <div>
@@ -69,7 +69,7 @@ function Products() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-4 container mx-auto mt-12">
             {menuItems.map((products, index) => (
-              <div>
+              <div key={index}>
                 <div className="flex flex-col ">
                   <div className="grid grid-cols-1">
                     <div className="flex flex-wrap  cursor-pointer hover:scale-105 transition-all">
@@ -144,9 +144,9 @@ function Products() {
                               {products.rating.count} vote{" "}
                             </span>
                           </div>
-                          <button class="flex items-center justify-center w-full px-2 py-2 mt-4 font-medium tracking-wide text-white  transition-colors duration-200 transform bg-gray-800 rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
+                          <button className="flex items-center justify-center w-full px-2 py-2 mt-4 font-medium tracking-wide text-white  transition-colors duration-200 transform bg-gray-800 rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
                             <BsFillCartFill className="text-white" />
-                            <span class="mx-1">Add to Cart</span>
+                            <span className="mx-1">Add to Cart</span>
                           </button>
                         </div>
                       </div>

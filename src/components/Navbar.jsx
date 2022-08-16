@@ -34,7 +34,7 @@ function Navbar() {
             className={
               icon
                 ? "hidden md:flex gap-x-4"
-                : "flex flex-col absolute bg-gray-300 mt-48 gap-y-8  p-8 justify-center items-center w-full transition-all z-100"
+                : "flex flex-col absolute bg-gray-300 mt-48 gap-y-8  p-8 justify-center items-center w-full transition-all z-50"
             }
           >
             <div className="relative">
@@ -52,7 +52,7 @@ function Navbar() {
 
               <div
                 id="sortboxmenu"
-                className="absolute mt-1 right-1 top-full min-w-max shadow rounded opacity-0 bg-gray-200 border border-gray-400 transition delay-75 ease-in-out -z-10"
+                className="absolute mt-1 right-1 top-full min-w-max shadow rounded opacity-0 bg-gray-200 border border-gray-400 transition delay-75 ease-in-out z-100"
               >
                 <ul className="block text-gray-900 p-4">
                   <li>
