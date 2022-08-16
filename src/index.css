@@ -15,9 +15,9 @@ body {
 
 #sortbox:checked ~ #sortboxmenu {
   opacity: 1;
-
   z-index: 100;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
