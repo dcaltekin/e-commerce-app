@@ -75,14 +75,15 @@ function Products() {
                     <div className="flex flex-wrap  cursor-pointer hover:scale-105 transition-all">
                       <div className="w-full  p-4 -z-50 ">
                         <div className="block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
-                          <div className="relative pb-48 overflow-hidden">
-                            <img
-                              className="absolute inset-0 h-full w-full object-contain "
-                              src={products.image}
-                              alt=""
-                            />
-                          </div>
                           <a href={`product/${products.id}`}>
+                            <div className="relative pb-48 overflow-hidden">
+                              <img
+                                className="absolute inset-0 h-full w-full object-contain "
+                                src={products.image}
+                                alt=""
+                              />
+                            </div>
+
                             <div className="p-4">
                               <span className="inline-block px-2 py-1 leading-none bg-orange-200 text-orange-800 rounded-full font-semibold uppercase tracking-wide text-xs">
                                 Campaign

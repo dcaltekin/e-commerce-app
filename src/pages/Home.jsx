@@ -1,7 +1,8 @@
 import React from "react";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Products from "../components/Products";
-import TopCampaign from "../components/TopCampaign";
+
 import TopSlider from "../components/TopSlider";
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
       <Navbar />
       <TopSlider />
       <Products />
+      <Footer />
     </div>
   );
 }
