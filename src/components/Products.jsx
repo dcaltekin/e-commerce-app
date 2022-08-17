@@ -50,7 +50,7 @@ function Products() {
         </div>
       ) : (
         <div>
-          <div className="text-center container mx-auto mt-12">
+          <div className="text-center container mx-auto mt-12" id="products">
             {allCategories.map((category, index) => {
               return (
                 <button

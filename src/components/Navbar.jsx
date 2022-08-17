@@ -16,13 +16,13 @@ function Navbar() {
   };
 
   return (
-    <div>
+    <div className="sticky top-0 z-50">
       <TopCampaign />
-      <div className="bg-gray-200">
+      <div className="bg-gray-200 ">
         <div className="container mx-auto flex items-center justify-around py-4 ">
-          <Link to="/">
+          <a href="/">
             <h3 className="text-2xl">CLTKN-Trade</h3>
-          </Link>
+          </a>
 
           <input
             type="text"
@@ -33,7 +33,7 @@ function Navbar() {
           <ul
             className={
               icon
-                ? "hidden md:flex gap-x-4"
+                ? "hidden md:flex gap-x-4 "
                 : "flex flex-col absolute bg-gray-300 mt-48 gap-y-8  p-8 justify-center items-center w-full transition-all z-50"
             }
           >
@@ -52,7 +52,7 @@ function Navbar() {
 
               <div
                 id="sortboxmenu"
-                className="absolute mt-1 right-1 top-full min-w-max shadow rounded opacity-0 bg-gray-200 border border-gray-400 transition delay-75 ease-in-out z-100"
+                className="absolute mt-1 right-1 top-full min-w-max shadow rounded hidden bg-gray-200 border border-gray-400 transition delay-75 ease-in-out -z-50"
               >
                 <ul className="block text-gray-900 p-4">
                   <li>

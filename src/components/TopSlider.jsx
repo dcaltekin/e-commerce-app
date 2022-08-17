@@ -7,15 +7,13 @@ function TopSlider() {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    vertical: true,
-    verticalSwiping: true,
-    swipeToSlide: true,
+
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
   };
   return (
-    <div className=" p-0 md:p-0 -z-100">
+    <div className=" p-0 md:p-0 z-50">
       <Slider {...settings}>
         <div className="">
           <img
