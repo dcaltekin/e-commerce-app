@@ -19,19 +19,19 @@ function Navbar() {
     <div className="sticky top-0 z-50">
       <TopCampaign />
       <div className="bg-gray-200 ">
-        <div className="container mx-auto flex items-center justify-between py-4 ">
+        <div className=" md:container md:mx-auto flex items-center justify-between py-4 ">
           <a href="/">
-            <h3 className="text-2xl">CLTKN</h3>
+            <h3 className=" container mx-auto text-2xl">CLTKN</h3>
           </a>
 
           <ul
             className={
               icon
-                ? "hidden md:flex gap-x-4 "
+                ? "hidden md:flex gap-x-4"
                 : "flex flex-col absolute bg-gray-300 mt-48 gap-y-8  p-8 justify-center items-center w-full transition-all z-50"
             }
           >
-            <div className="relative">
+            <div className="relative ">
               <input type="checkbox" id="sortbox" className="hidden absolute" />
               <div onClick={handleRegisterIcon}>
                 <label
@@ -71,7 +71,10 @@ function Navbar() {
               <li>Cart</li>
             </div>
           </ul>
-          <div className="sm:block md:hidden text-2xl" onClick={handleIcon}>
+          <div
+            className="sm:block md:hidden text-2xl mr-4 md:mr-0"
+            onClick={handleIcon}
+          >
             <i className={icon ? "fa-solid fa-bars" : "fa-solid fa-xmark"} />
           </div>
         </div>
