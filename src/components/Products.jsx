@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { BsFillCartFill } from "react-icons/bs";
 import "react-loading-skeleton/dist/skeleton.css";
+import Loading from "./Loading";
 
 function Products() {
   const [data, setData] = useState([]);
@@ -45,9 +46,7 @@ function Products() {
   return (
     <div>
       {loading ? (
-        <div className="flex justify-center items-center mt-48">
-          <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
-        </div>
+        <Loading />
       ) : (
         <div>
           <div className="text-center container mx-auto mt-12" id="products">

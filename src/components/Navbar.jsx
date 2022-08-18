@@ -21,7 +21,7 @@ function Navbar() {
       <div className="bg-gray-200 ">
         <div className="container mx-auto flex items-center justify-around py-4 ">
           <a href="/">
-            <h3 className="text-xl">CLTKN-Trade</h3>
+            <h3 className="text-2xl">CLTKN</h3>
           </a>
 
           <input
