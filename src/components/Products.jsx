@@ -76,7 +76,7 @@ function Products() {
                       <div className="w-full  p-4 -z-50 ">
                         <div className="block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                           <a href={`product/${products.id}`}>
-                            <div className="relative pb-48 overflow-hidden">
+                            <div className="relative pb-48 overflow-hidden my-6">
                               <img
                                 className="absolute inset-0 h-full w-full object-contain "
                                 src={products.image}

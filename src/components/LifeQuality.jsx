@@ -3,7 +3,7 @@ import React from "react";
 function LifeQuality() {
   return (
     <div>
-      <section className="py-8 leading-7 text-gray-900 bg-white sm:py-12 md:py-16 lg:py-24">
+      <section className="py-8 leading-7 text-gray-900 bg-gray-100 sm:py-12 md:py-16 lg:py-24">
         <div className="max-w-6xl  px-10 mx-auto border-solid lg:px-12">
           <div className="flex flex-col items-start leading-7 text-gray-900 border-0 border-gray-200 lg:items-center lg:flex-row">
             <div className="box-border flex-1 text-center border-solid sm:text-left">
