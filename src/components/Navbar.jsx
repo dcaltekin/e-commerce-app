@@ -19,17 +19,11 @@ function Navbar() {
     <div className="sticky top-0 z-50">
       <TopCampaign />
       <div className="bg-gray-200 ">
-        <div className="container mx-auto flex items-center justify-around py-4 ">
+        <div className="container mx-auto flex items-center justify-between py-4 ">
           <a href="/">
             <h3 className="text-2xl">CLTKN</h3>
           </a>
 
-          <input
-            type="text"
-            placeholder="Search..."
-            required
-            className="w-5/12 ml-0 lg:ml-24 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500  pl-6 p-2"
-          />
           <ul
             className={
               icon

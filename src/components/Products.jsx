@@ -66,6 +66,15 @@ function Products() {
               );
             })}
           </div>
+          <div className="container mx-auto">
+            <input
+              type="text"
+              placeholder="Search..."
+              required
+              className="block w-full px-4 py-4 mt-16 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
+            />
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-4 container mx-auto mt-12">
             {menuItems.map((products, index) => (
               <div key={index}>
