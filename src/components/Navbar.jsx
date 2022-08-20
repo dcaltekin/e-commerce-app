@@ -16,13 +16,14 @@ function Navbar() {
     setRegisterIcon(!registerIcon);
   };
   const cart = useSelector((state) => state.cart);
-  const getTotalQuantity = () => {
-    let total = 0;
-    cart.forEach((item) => {
-      total += item.quantity;
-    });
-    return total;
-  };
+
+  // const getTotalQuantity = () => {
+  //   let total = 0;
+  //   cart.forEach((item) => {
+  //     total += item.quantity;
+  //   });
+  //   return total;
+  // };
 
   return (
     <div className="sticky top-0 z-50">
@@ -79,7 +80,7 @@ function Navbar() {
               <div className="flex items-center gap-x-1 z-100 cursor-pointer">
                 <BsFillCartFill size={18} />
                 <li>Cart</li>
-                <span>{`(${getTotalQuantity()})` || "(0)"}</span>
+                <span>{`(${cart.length})` || "(0)"}</span>
               </div>
             </NavLink>
           </ul>
