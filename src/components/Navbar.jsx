@@ -3,8 +3,9 @@ import { FaUserAlt } from "react-icons/fa";
 import { AiOutlineDown } from "react-icons/ai";
 import { BsFillCartFill } from "react-icons/bs";
 import { AiOutlineUp } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import TopCampaign from "./TopCampaign";
+import { useSelector } from "react-redux";
 function Navbar() {
   const [icon, setIcon] = useState(true);
   const handleIcon = () => {
@@ -13,6 +14,14 @@ function Navbar() {
   const [registerIcon, setRegisterIcon] = useState(true);
   const handleRegisterIcon = () => {
     setRegisterIcon(!registerIcon);
+  };
+  const cart = useSelector((state) => state.cart);
+  const getTotalQuantity = () => {
+    let total = 0;
+    cart.forEach((item) => {
+      total += item.quantity;
+    });
+    return total;
   };
 
   return (
@@ -66,10 +75,13 @@ function Navbar() {
                 </ul>
               </div>
             </div>
-            <div className="flex items-center gap-x-1 z-100 cursor-pointer">
-              <BsFillCartFill size={18} />
-              <li>Cart</li>
-            </div>
+            <NavLink to="/cart">
+              <div className="flex items-center gap-x-1 z-100 cursor-pointer">
+                <BsFillCartFill size={18} />
+                <li>Cart</li>
+                <span>{`(${getTotalQuantity()})` || "(0)"}</span>
+              </div>
+            </NavLink>
           </ul>
           <div
             className="sm:block md:hidden text-2xl mr-4 md:mr-0"

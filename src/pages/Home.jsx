@@ -10,12 +10,9 @@ function Home() {
   return (
     <div>
       <Navbar />
-
       <TopSlider />
       <LifeQuality />
-
       <Products />
-
       <Footer />
     </div>
   );

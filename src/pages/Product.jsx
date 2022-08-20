@@ -6,6 +6,7 @@ function Product() {
   return (
     <div>
       <Navbar />
+
       <ProductDetail />
       <Footer />
     </div>
