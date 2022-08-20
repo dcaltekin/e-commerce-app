@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
+import toast, { Toaster } from "react-hot-toast";
 
 function ProductDetail({ title, image, price, id, category, description }) {
   const { productid } = useParams();
@@ -12,6 +13,17 @@ function ProductDetail({ title, image, price, id, category, description }) {
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   console.log(productData);
+
+  function notify() {
+    toast.success(`${productData.title} succesfully added!`, {
+      duration: 4000,
+      position: "top-center",
+
+      // Styling
+      style: {},
+      className: "",
+    });
+  }
 
   useEffect(() => {
     const getData = async () => {
@@ -157,7 +169,7 @@ function ProductDetail({ title, image, price, id, category, description }) {
                   </span>
 
                   <button
-                    onClick={() =>
+                    onClick={() => {
                       dispatch(
                         addToCart({
                           id: productData.id,
@@ -167,12 +179,14 @@ function ProductDetail({ title, image, price, id, category, description }) {
                           category: productData.category,
                           description: productData.description,
                         })
-                      )
-                    }
+                      );
+                      notify();
+                    }}
                     className="flex ml-auto text-white  bg-indigo-600  border-indigo-600 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-700 rounded"
                   >
                     Add to Cart
                   </button>
+                  <Toaster position="top-center fixed" reverseOrder={false} />
                 </div>
               </div>
             </div>

@@ -10,6 +10,10 @@ function Products() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  if (error) {
+    console.log(error);
+  }
+
   const allCategories = [
     "All",
     ...new Set(data.map((item, index) => item.category)),

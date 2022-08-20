@@ -14,7 +14,7 @@ function CartDesign() {
               <div className="flex justify-between border-b pb-8">
                 <h1 className="font-semibold text-2xl">Shopping Cart</h1>
                 <h2 className="font-semibold text-2xl">
-                  {cart.length > 0 ? cart.length + " Items" : "No Items Added"}{" "}
+                  {cart.length > 0 ? cart.length + " Items" : "No Items Added"}
                 </h2>
               </div>
 
@@ -27,55 +27,59 @@ function CartDesign() {
                   Price
                 </h3>
               </div>
-              {cart?.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-center  hover:bg-gray-100 -mx-8 px-6 py-5"
-                >
-                  {" "}
-                  <div className="flex w-full flex-col md:flex-row">
-                    <div className="w-20">
-                      <img className="h-24" src={item.image} alt="" />
-                    </div>
-                    <div className="flex flex-col justify-between ml-0 md:ml-4 flex-grow ">
-                      <span className="font-bold text-sm">{item.title}</span>
-                      <span className="text-red-600 capitalize text-xs font-semibold">
-                        {item.category}
+              {cart.length > 0
+                ? cart?.map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center  hover:bg-gray-100 -mx-8 px-6 py-5"
+                    >
+                      {" "}
+                      <div className="flex w-full flex-col md:flex-row">
+                        <div className="w-20">
+                          <img className="h-24" src={item.image} alt="" />
+                        </div>
+                        <div className="flex flex-col justify-between ml-0 mt-2 md:mt-0 md:ml-4 flex-grow ">
+                          <span className="font-bold text-sm">
+                            {item.title}
+                          </span>
+                          <span className="text-red-600 capitalize text-xs font-semibold">
+                            {item.category}
+                          </span>
+                          <a
+                            href="#"
+                            className="font-semibold hover:text-red-500 text-gray-500 text-xs"
+                          >
+                            Remove
+                          </a>
+                        </div>
+                      </div>
+                      <div className="flex justify-center  mr-8">
+                        <svg
+                          className="fill-current text-gray-600 w-3"
+                          viewBox="0 0 448 512"
+                        >
+                          <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+                        </svg>
+
+                        <input
+                          className="mx-2 border text-center w-8"
+                          type="text"
+                          value={item.quantity}
+                        />
+
+                        <svg
+                          className="fill-current text-gray-600 w-3"
+                          viewBox="0 0 448 512"
+                        >
+                          <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+                        </svg>
+                      </div>
+                      <span className="text-center font-semibold text-sm w-1/5">
+                        {item.price}$
                       </span>
-                      <a
-                        href="#"
-                        className="font-semibold hover:text-red-500 text-gray-500 text-xs"
-                      >
-                        Remove
-                      </a>
                     </div>
-                  </div>
-                  <div className="flex justify-center  mr-8">
-                    <svg
-                      className="fill-current text-gray-600 w-3"
-                      viewBox="0 0 448 512"
-                    >
-                      <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
-                    </svg>
-
-                    <input
-                      className="mx-2 border text-center w-8"
-                      type="text"
-                      value={item.quantity}
-                    />
-
-                    <svg
-                      className="fill-current text-gray-600 w-3"
-                      viewBox="0 0 448 512"
-                    >
-                      <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
-                    </svg>
-                  </div>
-                  <span className="text-center font-semibold text-sm w-1/5">
-                    {item.price}$
-                  </span>
-                </div>
-              ))}
+                  ))
+                : "There is no item here. Go to Homepage for the shopping!"}
 
               <a
                 href="#"
