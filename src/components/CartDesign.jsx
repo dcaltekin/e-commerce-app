@@ -44,11 +44,13 @@ function CartDesign() {
                       {" "}
                       <div className="flex w-full flex-col md:flex-row">
                         <div className="w-20">
-                          <img className="h-24" src={item.image} alt="" />
+                          <a href={`product/${item.id}`}>
+                            <img className="h-24" src={item.image} alt="" />
+                          </a>
                         </div>
                         <div className="flex flex-col gap-y-2 justify-between ml-0 mt-2 md:mt-0 md:ml-4 flex-grow ">
                           <span className="font-bold text-sm">
-                            {item.title}
+                            <a href={`product/${item.id}`}>{item.title}</a>
                           </span>
                           <span className="text-red-600 capitalize text-xs font-semibold">
                             {item.category}
