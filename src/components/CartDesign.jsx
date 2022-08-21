@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { incrementQuantity } from "../redux/cartSlice";
+import { incrementQuantity, decrementQuantity } from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
 
 function CartDesign() {
@@ -57,7 +57,10 @@ function CartDesign() {
                         </div>
                       </div>
                       <div className="flex justify-center  mr-8">
-                        <button className="text-3xl text-gray-600 w-3">
+                        <button
+                          onClick={() => dispatch(decrementQuantity(item.id))}
+                          className="text-3xl text-gray-600 w-3"
+                        >
                           -
                         </button>
 
