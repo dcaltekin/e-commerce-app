@@ -1,9 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { incrementQuantity } from "../redux/cartSlice";
+import { useDispatch } from "react-redux";
 
 function CartDesign() {
   const cart = useSelector((state) => state.cart);
   console.log(cart);
+  const dispatch = useDispatch();
 
   return (
     <div>
@@ -23,7 +26,7 @@ function CartDesign() {
                   Product Details
                 </h3>
 
-                <h3 className="font-semibold  text-gray-600 text-xs uppercase w-1/5 text-center">
+                <h3 className="font-semibold  text-gray-600 text-xs uppercase ml-4 w-2/12 text-center">
                   Price
                 </h3>
               </div>
@@ -54,12 +57,9 @@ function CartDesign() {
                         </div>
                       </div>
                       <div className="flex justify-center  mr-8">
-                        <svg
-                          className="fill-current text-gray-600 w-3"
-                          viewBox="0 0 448 512"
-                        >
-                          <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
-                        </svg>
+                        <button className="text-3xl text-gray-600 w-3">
+                          -
+                        </button>
 
                         <input
                           className="mx-2 border text-center w-8"
@@ -67,12 +67,12 @@ function CartDesign() {
                           value={item.quantity}
                         />
 
-                        <svg
-                          className="fill-current text-gray-600 w-3"
-                          viewBox="0 0 448 512"
+                        <button
+                          onClick={() => dispatch(incrementQuantity(item.id))}
+                          className="text-3xl text-gray-600 w-3"
                         >
-                          <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
-                        </svg>
+                          +
+                        </button>
                       </div>
                       <span className="text-center font-semibold text-sm w-1/5">
                         {item.price}$

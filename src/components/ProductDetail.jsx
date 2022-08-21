@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 import toast, { Toaster } from "react-hot-toast";
 
-function ProductDetail({ title, image, price, id, category, description }) {
+function ProductDetail() {
   const { productid } = useParams();
   const [productData, setProductData] = useState(null);
   const [loading, setLoading] = useState(true);
