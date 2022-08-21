@@ -58,7 +58,7 @@ function ProductDetail() {
                 <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
                   {productData.title}
                 </h1>
-                <div className="flex mb-4">
+                {/* <div className="flex mb-4">
                   <span className="flex items-center">
                     <svg
                       fill="currentColor"
@@ -120,7 +120,7 @@ function ProductDetail() {
                       {productData.rating.count} Vote
                     </span>
                   </span>
-                </div>
+                </div> */}
                 <p className="leading-relaxed">{productData.description}</p>
                 <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
                   <div className="flex">
