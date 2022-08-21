@@ -23,6 +23,13 @@ function OrderSummary() {
           {getTotal().totalPrice.toFixed(2)}$
         </span>
       </div>
+      {getTotal().totalPrice < 100 && (
+        <div className="flex justify-between mt-2 mb-5">
+          <span className="font-semibold text-sm uppercase">Shipping Cost</span>
+          <span className="font-semibold text-sm">{10}$</span>
+        </div>
+      )}
+
       <div>
         <label className="font-medium inline-block mb-3 text-sm uppercase">
           Shipping

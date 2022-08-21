@@ -12,7 +12,6 @@ function ProductDetail() {
   const [productData, setProductData] = useState(null);
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
-  console.log(productData);
 
   function notify() {
     toast.success(`${productData.title} succesfully added!`, {

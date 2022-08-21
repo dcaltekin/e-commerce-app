@@ -11,7 +11,7 @@ import OrderSummary from "./OrderSummary";
 
 function CartDesign() {
   const cart = useSelector((state) => state.cart);
-  console.log(cart);
+
   const dispatch = useDispatch();
 
   return (
