@@ -58,6 +58,7 @@ function Footer() {
           <div className="flex justify-center mt-8 space-x-6">
             <a
               href="https://www.instagram.com/dogukancaltekin/"
+              target="_blank"
               className="text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">Instagram</span>
@@ -76,6 +77,7 @@ function Footer() {
             </a>
             <a
               href="https://twitter.com/distantmundos"
+              target="_blank"
               className="text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">Twitter</span>
@@ -90,6 +92,7 @@ function Footer() {
             </a>
             <a
               href="https://github.com/dcaltekin"
+              target="_blank"
               className="text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">GitHub</span>
