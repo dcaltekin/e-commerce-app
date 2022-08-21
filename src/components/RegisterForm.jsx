@@ -43,12 +43,9 @@ function RegisterForm() {
                     />
                   </div>
                   <div className="relative">
-                    <a
-                      href="#_"
-                      className="inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-blue-600 rounded-lg hover:bg-blue-700 ease"
-                    >
+                    <button className="inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-blue-600 rounded-lg hover:bg-blue-700 ease">
                       Create Account
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
