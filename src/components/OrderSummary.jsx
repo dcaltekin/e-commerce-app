@@ -44,7 +44,6 @@ function OrderSummary() {
             </span>
             <select className="block p-2 text-gray-600  text-sm mt-4">
               <option>Standard shipping - $10.00</option>
-              <option>Professional shipping - $20.00</option>
             </select>
           </div>
         )}
@@ -69,7 +68,12 @@ function OrderSummary() {
       <div className="border-t mt-8">
         <div className="flex font-semibold justify-between py-6 text-sm uppercase">
           <span>Total cost</span>
-          <span>$600</span>
+          <span>
+            {getTotal().totalPrice >= 100
+              ? getTotal().totalPrice.toFixed(2)
+              : 10 + getTotal().totalPrice}
+            $
+          </span>
         </div>
         <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
           Checkout
