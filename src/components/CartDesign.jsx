@@ -1,6 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { incrementQuantity, decrementQuantity } from "../redux/cartSlice";
+import {
+  incrementQuantity,
+  decrementQuantity,
+  removeItem,
+} from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
 
 function CartDesign() {
@@ -41,19 +45,19 @@ function CartDesign() {
                         <div className="w-20">
                           <img className="h-24" src={item.image} alt="" />
                         </div>
-                        <div className="flex flex-col justify-between ml-0 mt-2 md:mt-0 md:ml-4 flex-grow ">
+                        <div className="flex flex-col gap-y-2 justify-between ml-0 mt-2 md:mt-0 md:ml-4 flex-grow ">
                           <span className="font-bold text-sm">
                             {item.title}
                           </span>
                           <span className="text-red-600 capitalize text-xs font-semibold">
                             {item.category}
                           </span>
-                          <a
-                            href="#"
-                            className="font-semibold hover:text-red-500 text-gray-500 text-xs"
+                          <button
+                            onClick={() => dispatch(removeItem(item.id))}
+                            className="flex justify-start font-semibold hover:text-red-500 text-gray-500 text-xs"
                           >
                             Remove
-                          </a>
+                          </button>
                         </div>
                       </div>
                       <div className="flex justify-center  mr-8">
