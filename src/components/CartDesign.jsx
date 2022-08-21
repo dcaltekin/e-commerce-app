@@ -93,7 +93,7 @@ function CartDesign() {
                 : "There is no item here. Go to Homepage for the shopping!"}
 
               <a
-                href="#"
+                href="/home"
                 className="flex font-semibold text-indigo-600 text-sm mt-10"
               >
                 <svg

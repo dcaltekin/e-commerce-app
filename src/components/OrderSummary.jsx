@@ -19,15 +19,35 @@ function OrderSummary() {
         <span className="font-semibold text-sm uppercase">
           {cart.length} Items
         </span>
-        <span className="font-semibold text-sm">{getTotal().totalPrice}$</span>
+        <span className="font-semibold text-sm">
+          {getTotal().totalPrice.toFixed(2)}$
+        </span>
       </div>
       <div>
         <label className="font-medium inline-block mb-3 text-sm uppercase">
           Shipping
         </label>
-        <select className="block p-2 text-gray-600 w-full text-sm">
-          <option>Standard shipping - $10.00</option>
-        </select>
+        {getTotal().totalPrice >= 100 ? (
+          <div>
+            <div className="block p-2 text-center rounded-lg text-white w-full  text-sm bg-indigo-500">
+              Free Shipping
+            </div>
+          </div>
+        ) : (
+          <div>
+            <span className="text-sm">
+              If you add{" "}
+              <span className="text-red-500 font-bold">
+                {100 - getTotal().totalPrice.toFixed(0) + 1}$
+              </span>{" "}
+              more, shipping is free!
+            </span>
+            <select className="block p-2 text-gray-600  text-sm mt-4">
+              <option>Standard shipping - $10.00</option>
+              <option>Professional shipping - $20.00</option>
+            </select>
+          </div>
+        )}
       </div>
       <div className="py-10">
         <label
