@@ -38,7 +38,10 @@ function OrderSummary() {
             <span className="text-sm">
               If you add{" "}
               <span className="text-red-500 font-bold">
-                {100 - getTotal().totalPrice.toFixed(0) + 1}$
+                {getTotal().totalPrice === 0
+                  ? 100
+                  : 100 - getTotal().totalPrice.toFixed(0) + 1}
+                $
               </span>{" "}
               more, shipping is free!
             </span>
