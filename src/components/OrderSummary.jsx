@@ -1,12 +1,25 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 function OrderSummary() {
+  const cart = useSelector((state) => state.cart);
+  const getTotal = () => {
+    let totalQuantity = 0;
+    let totalPrice = 0;
+    cart.forEach((item) => {
+      totalQuantity += item.quantity;
+      totalPrice += item.price * item.quantity;
+    });
+    return { totalPrice, totalQuantity };
+  };
   return (
     <div className="w-full lg:w-1/4 px-8 py-10">
       <h1 className="font-semibold text-2xl border-b pb-8">Order Summary</h1>
       <div className="flex justify-between mt-10 mb-5">
-        <span className="font-semibold text-sm uppercase">Items 3</span>
-        <span className="font-semibold text-sm">590$</span>
+        <span className="font-semibold text-sm uppercase">
+          {cart.length} Items
+        </span>
+        <span className="font-semibold text-sm">{getTotal().totalPrice}$</span>
       </div>
       <div>
         <label className="font-medium inline-block mb-3 text-sm uppercase">
