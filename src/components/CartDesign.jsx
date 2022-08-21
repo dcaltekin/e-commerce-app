@@ -6,6 +6,7 @@ import {
   removeItem,
 } from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
+import { IoIosTrash } from "react-icons/io";
 
 function CartDesign() {
   const cart = useSelector((state) => state.cart);
@@ -54,9 +55,9 @@ function CartDesign() {
                           </span>
                           <button
                             onClick={() => dispatch(removeItem(item.id))}
-                            className="flex justify-start font-semibold hover:text-red-500 text-gray-500 text-xs"
+                            className="flex w-8 justify-start font-semibold hover:text-red-500 text-gray-500 text-xs"
                           >
-                            Remove
+                            <IoIosTrash size={25} />
                           </button>
                         </div>
                       </div>
