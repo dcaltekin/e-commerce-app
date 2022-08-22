@@ -3,12 +3,15 @@ import axios from "axios";
 import { BsFillCartFill } from "react-icons/bs";
 import "react-loading-skeleton/dist/skeleton.css";
 import Loading from "./Loading";
-import { NavLink } from "react-router-dom";
+
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/cartSlice";
 
 function Products() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const dispatch = useDispatch();
 
   if (error) {
     console.log(error);
@@ -286,7 +289,7 @@ function Products() {
                                     </>
                                   )}
 
-                                {products.rating.rate == 5 && (
+                                {products.rating.rate === 5 && (
                                   <>
                                     <svg
                                       viewBox="0 0 24 24"
@@ -330,15 +333,26 @@ function Products() {
                                   {products.rating.count} vote{" "}
                                 </span>
                               </div>
-                              <NavLink to={`/product/${products.id}`}>
-                                <button className="flex items-center justify-center w-full px-2 py-2 mt-4 font-medium tracking-wide text-white  transition-colors duration-200 transform bg-gray-800 rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
-                                  {/* <BsFillCartFill className="text-white" /> */}
 
-                                  <span className="mx-1">
-                                    Click for Details
-                                  </span>
-                                </button>
-                              </NavLink>
+                              <button
+                                onClick={() => {
+                                  dispatch(
+                                    addToCart({
+                                      id: products.id,
+                                      title: products.title,
+                                      image: products.image,
+                                      price: products.price,
+                                      category: products.category,
+                                      description: products.description,
+                                    })
+                                  );
+                                }}
+                                className="flex items-center justify-center w-full px-2 py-2 mt-4 font-medium tracking-wide text-white  transition-colors duration-200 transform bg-gray-800 rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700"
+                              >
+                                <BsFillCartFill className="text-white" />
+
+                                <span className="mx-1">Add to Cart</span>
+                              </button>
                             </div>
                           </div>
                         </div>

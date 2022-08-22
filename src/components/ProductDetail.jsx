@@ -311,7 +311,7 @@ function ProductDetail() {
                       </span>
                     </span>
                   )}
-                  {productData.rating.rate == 5 && (
+                  {productData.rating.rate === 5 && (
                     <span className="flex items-center">
                       <svg
                         fill="currentColor"
