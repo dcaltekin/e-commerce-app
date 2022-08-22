@@ -53,7 +53,7 @@ function OrderSummary() {
               more, shipping is free!
             </span>
             <select className="block p-2 text-gray-600  text-sm mt-4">
-              <option>Standard shipping - $9.99</option>
+              <option>Standard shipping - 9.99$</option>
             </select>
           </div>
         )}
