@@ -3,7 +3,7 @@ import axios from "axios";
 import { BsFillCartFill } from "react-icons/bs";
 import "react-loading-skeleton/dist/skeleton.css";
 import Loading from "./Loading";
-
+import toast, { Toaster } from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 
@@ -12,6 +12,17 @@ function Products() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const dispatch = useDispatch();
+
+  function notify() {
+    toast.success(`Product succesfully added!`, {
+      duration: 500,
+      position: "top-center",
+
+      // Styling
+      style: {},
+      className: "",
+    });
+  }
 
   if (error) {
     console.log(error);
@@ -346,6 +357,7 @@ function Products() {
                                       description: products.description,
                                     })
                                   );
+                                  notify();
                                 }}
                                 className="flex items-center justify-center w-full px-2 py-2 mt-4 font-medium tracking-wide text-white  transition-colors duration-200 transform bg-gray-800 rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700"
                               >
@@ -353,6 +365,10 @@ function Products() {
 
                                 <span className="mx-1">Add to Cart</span>
                               </button>
+                              <Toaster
+                                position="top-center"
+                                reverseOrder={false}
+                              />
                             </div>
                           </div>
                         </div>
