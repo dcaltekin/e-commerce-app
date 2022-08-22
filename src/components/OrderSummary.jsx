@@ -26,7 +26,7 @@ function OrderSummary() {
       {getTotal().totalPrice < 100 && (
         <div className="flex justify-between mt-2 mb-5">
           <span className="font-semibold text-sm uppercase">Shipping Cost</span>
-          <span className="font-semibold text-sm">{10}$</span>
+          <span className="font-semibold text-sm">{9.99}$</span>
         </div>
       )}
 
@@ -53,7 +53,7 @@ function OrderSummary() {
               more, shipping is free!
             </span>
             <select className="block p-2 text-gray-600  text-sm mt-4">
-              <option>Standard shipping - $10.00</option>
+              <option>Standard shipping - $9.99</option>
             </select>
           </div>
         )}
@@ -81,7 +81,7 @@ function OrderSummary() {
           <span>
             {getTotal().totalPrice >= 100
               ? getTotal().totalPrice.toFixed(2)
-              : 10 + getTotal().totalPrice}
+              : 9.99 + Number(getTotal().totalPrice.toFixed(2))}
             $
           </span>
         </div>
