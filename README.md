@@ -7,6 +7,7 @@
 ### `Redux Toolkit`
 ### `React Redux`
 ### `Redux Persist`
+### `FakeStoreAPI`
 ### `React Router`
 ### `React Hot Toast`
 ### `React Icons`
