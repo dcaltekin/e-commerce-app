@@ -12,7 +12,7 @@ body {
   font-family: "Prompt", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: scroll;
+   contain: paint;
 }
 
 #sortbox:checked ~ #sortboxmenu {
