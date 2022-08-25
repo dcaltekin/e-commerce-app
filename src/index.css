@@ -6,10 +6,13 @@ html,
 body {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Prompt", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: scroll;
 }
 
 #sortbox:checked ~ #sortboxmenu {
