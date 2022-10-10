@@ -13,9 +13,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
    contain: paint;
-  white-space:nowrap;
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch;
+  
 }
 
 #sortbox:checked ~ #sortboxmenu {
