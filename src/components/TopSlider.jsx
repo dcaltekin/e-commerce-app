@@ -13,11 +13,11 @@ function TopSlider() {
     pauseOnHover: true,
   };
   return (
-    <div className=" p-0 md:p-0 z-50">
+    <div className=" p-0 md:p-0 z-50 overflow-x-hidden">
       <Slider {...settings}>
-        <div className="">
+        <div>
           <img
-            className="h-96 object-cover object-top w-full "
+            className="h-96 object-cover object-top w-full overflow-x-hidden "
             src="https://m.media-amazon.com/images/I/61jovjd+f9L._SX3000_.jpg"
             alt="s"
           />
@@ -31,7 +31,7 @@ function TopSlider() {
         </div>
         <div>
           <img
-            className="h-96 object-cover object-right-top md:object-top w-full"
+            className="h-96 object-cover object-right-top md:object-top w-full overflow-x-hidden"
             src="https://m.media-amazon.com/images/I/717OO5QwJnL._SX3000_.jpg"
             alt="s"
           />
