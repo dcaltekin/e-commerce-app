@@ -3,7 +3,7 @@ import Slider from "react-slick";
 
 function TopSlider() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -13,11 +13,11 @@ function TopSlider() {
     pauseOnHover: true,
   };
   return (
-    <div className=" p-0 md:p-0 z-50 overflow-x-hidden">
+    <div className=" p-0 md:p-0 z-50 overflow-hidden">
       <Slider {...settings}>
         <div>
           <img
-            className="h-96 object-cover object-top w-full overflow-x-hidden "
+            className="h-96 object-cover object-top w-full "
             src="https://m.media-amazon.com/images/I/61jovjd+f9L._SX3000_.jpg"
             alt="s"
           />
