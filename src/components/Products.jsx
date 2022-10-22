@@ -106,7 +106,7 @@ function Products() {
                     <div className="flex flex-col ">
                       <div className="grid grid-cols-1">
                         <div className="flex flex-wrap  cursor-pointer hover:scale-105 transition-all">
-                          <div className="w-full  p-4 -z-50 ">
+                          <div className="w-full  p-4">
                             <div className="block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                               <a href={`product/${products.id}`}>
                                 <div className="relative pb-48 overflow-hidden my-6">
