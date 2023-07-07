@@ -16,7 +16,7 @@ function Products() {
   function notify() {
     toast.success(`Product succesfully added!`, {
       duration: 500,
-      position: "top-center",
+      position: "bottom-center",
 
       // Styling
       style: {},
@@ -365,7 +365,7 @@ function Products() {
 
                                 <span className="mx-1">Add to Cart</span>
                               </button>
-                             
+                             <Toaster />
                             </div>
                           </div>
                         </div>
