@@ -15,7 +15,7 @@ function Products() {
 
   function notify() {
     toast.success(`Product succesfully added!`, {
-      duration: 300,
+      duration: 600,
       position: "top-center",
 
       // Styling
