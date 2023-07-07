@@ -3,7 +3,7 @@ import axios from "axios";
 import { BsFillCartFill } from "react-icons/bs";
 import "react-loading-skeleton/dist/skeleton.css";
 import Loading from "./Loading";
-import { ToastContainer, toast } from 'react-toastify';
+import toast, { Toaster } from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 
@@ -365,7 +365,7 @@ function Products() {
 
                                 <span className="mx-1">Add to Cart</span>
                               </button>
-                               <ToastContainer />
+                               <Toaster />
                             </div>
                           </div>
                         </div>
