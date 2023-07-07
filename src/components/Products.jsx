@@ -365,7 +365,7 @@ function Products() {
 
                                 <span className="mx-1">Add to Cart</span>
                               </button>
-                               <Toaster />
+                             
                             </div>
                           </div>
                         </div>
